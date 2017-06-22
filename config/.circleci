@@ -1,0 +1,10 @@
+ version: 2
+ jobs:
+   build:
+     working_directory: ~/
+     docker:
+       - image: circleci/openjdk:9
+     steps:
+       - checkout
+       - run: echo "hello world"
+       - run: pwd
