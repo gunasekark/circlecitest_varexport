@@ -1,8 +1,7 @@
 machine:
-
   java:
     version: openjdk7
-  compile:
-    override:
-      - echo 'hello world'
+compile:
+  override:
+     - echo 'hello world'
 
