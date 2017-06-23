@@ -1,6 +1,6 @@
 machine:
-  java:
-    version: openjdk7
+  python:
+    version: 2.7.12
 compile:
   override:
      - echo 'hello world'
