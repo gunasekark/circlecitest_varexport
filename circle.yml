@@ -5,4 +5,6 @@ compile:
   override:
      - echo 'hello world'
      - echo $ABC
-
+test:
+  override:
+     - nosetest
