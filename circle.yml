@@ -4,4 +4,5 @@ machine:
 compile:
   override:
      - echo 'hello world'
+     - echo $ABC
 
