@@ -9,6 +9,7 @@ compile:
         CDE=${ABC}
         echo $CDE
      - 'ls -l ~/'
+     - 'aws --version'
     # - 'ls -l ~/.aws/'
 test:
   override:
