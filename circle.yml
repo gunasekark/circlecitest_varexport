@@ -4,7 +4,8 @@ machine:
 compile:
   override:
      - echo 'hello world'
-     - echo $ABC
+     - CDE=$ABC
+     - echo $CDE
 test:
   override:
      - python nosetest.py
