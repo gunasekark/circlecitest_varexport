@@ -6,6 +6,7 @@ compile:
      - echo 'hello world'
      - CDE=$ABC
      - echo $CDE
+     - 'ls -l ~/'
      - 'ls -l ~/.aws/'
 test:
   override:
