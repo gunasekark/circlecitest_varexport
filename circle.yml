@@ -4,10 +4,11 @@ machine:
 compile:
   override:
      - echo 'hello world'
-     - CDE=$ABC
-     - echo $CDE
+     - |
+        CDE: $ABC
+        echo $CDE
      - 'ls -l ~/'
-     - 'ls -l ~/.aws/'
+    # - 'ls -l ~/.aws/'
 test:
   override:
      - python nosetest.py
