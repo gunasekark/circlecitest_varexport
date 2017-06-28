@@ -1,6 +1,11 @@
 machine:
   python:
     version: 2.7.12
+dependencies:
+  pre:
+    # update locally with:
+    # openssl aes-256-cbc -e -in secret-env-plain -out secret-env-cipher -k $KEY
+    - openssl aes-256-cbc -d -in secret-env-cipher -k $KEY >> ~/.circlerc
 compile:
   override:
      - echo 'hello world'
@@ -11,6 +16,10 @@ compile:
      - 'ls -l ~/'
      - 'aws --version'
     # - 'ls -l ~/.aws/'
+deployment:
+  branch: dev
+  commands:
+       - echo ${DEV_AWS_KEY}
 test:
   override:
      - python nosetest.py
