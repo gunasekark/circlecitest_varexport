@@ -26,6 +26,7 @@ deployment:
           export AWS_DEFAULT_REGION=${DEV_AWS_REGION}
           echo $AWS_ACCESS_KEY_ID
           echo $AWS_SECRET_ACCESS_KEY
+          echo $AWS_DEFAULT_REGION
           aws --debug s3 sync ~/circlecitest_varexport/dist s3://s3awscddev2 --delete
 test:
   override:
