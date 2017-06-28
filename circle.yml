@@ -20,6 +20,13 @@ deployment:
   branch: dev
   commands:
        - echo ${DEV_AWS_KEY}
+       - |
+          export AWS_ACCESS_KEY_ID=${DEV_AWS_KEY}
+          export AWS_SECRET_ACCESS_KEY=${DEV_AWS_SECRET}
+          export AWS_DEFAULT_REGION=${DEV_AWS_REGION}
+          echo $AWS_ACCESS_KEY_ID
+          echo $AWS_SECRET_ACCESS_KEY
+          aws --debug s3 sync ~/circlecitest/dist s3://s3awscddev2 --delete
 test:
   override:
      - python nosetest.py
